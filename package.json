@@ -5,12 +5,12 @@
   "main": "service.mjs",
   "type": "module",
   "exports": {
-    ".": "./src/server.mjs",
+    ".": "./src/server.js",
     "./db": "./src/config/db.cjs"
   },
   "scripts": {
-    "start:prod": "node src/server.mjs",
-    "start:dev": "node-dev --clear src/server.mjs",
+    "start:prod": "node src/server",
+    "start:dev": "node -e 'console.clear()' && nodemon src/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -39,6 +39,6 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "node-dev": "^7.0.0"
+    "nodemon": "^2.0.7"
   }
 }
