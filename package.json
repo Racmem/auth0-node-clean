@@ -6,7 +6,10 @@
   "type": "module",
   "exports": {
     ".": "./src/server.js",
-    "./db": "./src/config/db.cjs"
+    "./db": "./src/config/db.cjs",
+    "./routes/*": "./src/routes/*.js",
+    "./auth0": "./src/middleware/auth0.cjs",
+    "./constants": "./src/utils/constants.cjs"
   },
   "scripts": {
     "start:prod": "node src/server",
@@ -28,7 +31,10 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-jwt-authz": "^2.4.1",
     "express-session": "^1.17.2",
+    "jwks-rsa": "^2.0.3",
     "mongoose": "^5.12.13",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
